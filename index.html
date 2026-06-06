@@ -12,8 +12,9 @@
 
 :root{
 --gold:#D4AF37;
---dark:#0d0d0d;
---card:#171717;
+--dark:#0B0B0B;
+--card:#161616;
+--white:#ffffff;
 }
 
 *{
@@ -35,6 +36,410 @@ overflow-x:hidden;
 nav{
 position:fixed;
 top:0;
+width:100%;
+z-index:1000;
+background:rgba(0,0,0,.92);
+backdrop-filter:blur(12px);
+padding:18px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+border-bottom:1px solid rgba(212,175,55,.25);
+}
+
+nav a{
+text-decoration:none;
+color:var(--gold);
+font-weight:700;
+transition:.3s;
+}
+
+nav a:hover{
+opacity:.7;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),
+url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80");
+
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:1000px;
+}
+
+.badge{
+display:inline-block;
+padding:10px 25px;
+background:var(--gold);
+color:black;
+font-weight:800;
+border-radius:40px;
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:80px;
+margin-bottom:15px;
+}
+
+.hero h2{
+font-size:28px;
+font-weight:400;
+color:#ddd;
+}
+
+.hero p{
+margin-top:25px;
+font-size:20px;
+line-height:2;
+}
+
+.buttons{
+margin-top:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+text-decoration:none;
+border-radius:10px;
+margin:10px;
+font-weight:bold;
+}
+
+.btn-primary{
+background:var(--gold);
+color:black;
+}
+
+.btn-secondary{
+border:2px solid var(--gold);
+color:var(--gold);
+}
+
+/* GENERAL */
+
+section{
+padding:100px 10%;
+}
+
+.title{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color:var(--gold);
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.03);
+backdrop-filter:blur(10px);
+border:1px solid rgba(212,175,55,.2);
+border-radius:20px;
+padding:30px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(212,175,55,.2);
+}
+
+.card h3{
+color:var(--gold);
+margin-bottom:15px;
+}
+
+/* FOUNDER */
+
+.founder{
+text-align:center;
+max-width:900px;
+margin:auto;
+font-size:20px;
+line-height:2;
+}
+
+/* RULES */
+
+.rules{
+max-width:1000px;
+margin:auto;
+}
+
+.rules li{
+margin-bottom:15px;
+font-size:18px;
+}
+
+/* CERTIFICATE */
+
+.certificate{
+background:white;
+color:black;
+max-width:900px;
+margin:auto;
+padding:60px;
+border-radius:25px;
+text-align:center;
+}
+
+.certificate h2{
+color:#B8860B;
+font-size:50px;
+margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+padding:35px;
+text-align:center;
+color:#999;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero h2{
+font-size:20px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.title{
+font-size:30px;
+}
+
+.certificate{
+padding:25px;
+}
+
+.certificate h2{
+font-size:30px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#about">عن الجامعة</a>
+<a href="#founder">المؤسس</a>
+<a href="#programs">البرامج</a>
+<a href="#admission">القبول</a>
+<a href="#rules">القوانين</a>
+<a href="#certificate">الشهادات</a>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="badge">
+MAFIA UNIVERSITY
+</div>
+
+<h1>جامعة المافيا العالمية</h1>
+
+<h2>
+الأكاديمية الرائدة في تطوير مهارات لعبة المافيا
+</h2>
+
+<p>
+صرح أكاديمي متخصص في التحليل والاستنتاج والقيادة الاستراتيجية
+وإدارة الجلسات الاحترافية وصناعة القرار.
+</p>
+
+<div class="buttons">
+<a href="#admission" class="btn btn-primary">القبول والتسجيل</a>
+<a href="#programs" class="btn btn-secondary">استكشف البرامج</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">عن الجامعة</h2>
+
+<div class="founder">
+تُعد جامعة المافيا العالمية مؤسسة تعليمية افتراضية تهدف إلى تطوير
+مهارات التفكير النقدي والتحليل المنطقي والقيادة من خلال برامج
+متخصصة مستوحاة من لعبة المافيا.
+</div>
+
+</section>
+
+<section id="founder">
+
+<h2 class="title">المؤسس</h2>
+
+<div class="founder">
+
+<h3 style="color:#D4AF37;font-size:30px;">
+حسام عيسى الدراوشة
+</h3>
+
+<p>
+مؤسس جامعة المافيا العالمية وصاحب رؤية إنشاء بيئة تعليمية
+احترافية تجمع بين المنافسة والتعلم وتنمية المهارات القيادية.
+</p>
+
+</div>
+
+</section>
+
+<section id="programs">
+
+<h2 class="title">البرامج الأكاديمية</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>التحليل والاستنتاج</h3>
+<p>دراسة أساليب كشف المعلومات وتحليل السلوك.</p>
+</div>
+
+<div class="card">
+<h3>القيادة الاستراتيجية</h3>
+<p>بناء فرق فعالة واتخاذ القرارات الحاسمة.</p>
+</div>
+
+<div class="card">
+<h3>التواصل والإقناع</h3>
+<p>تطوير مهارات الحوار والتفاوض.</p>
+</div>
+
+<div class="card">
+<h3>إدارة الجلسات</h3>
+<p>تنظيم وإدارة الجلسات الاحترافية.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="admission">
+
+<h2 class="title">القبول والتسجيل</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>شرط القبول</h3>
+<p>الالتزام بميثاق الجامعة وقوانينها.</p>
+</div>
+
+<div class="card">
+<h3>الاختبار التمهيدي</h3>
+<p>اجتياز التقييم الأولي للمتقدم.</p>
+</div>
+
+<div class="card">
+<h3>التخرج</h3>
+<p>إكمال البرامج التدريبية والاختبارات المعتمدة.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="rules">
+
+<h2 class="title">القوانين الجامعية</h2>
+
+<ul class="rules">
+
+<li>الاحترام المتبادل بين جميع المشاركين.</li>
+<li>منع الإساءة أو التنمر.</li>
+<li>الالتزام بقرارات الإدارة.</li>
+<li>منع الغش أو تبادل المعلومات السرية.</li>
+<li>الحفاظ على الروح الرياضية.</li>
+<li>الالتزام بأخلاقيات الجامعة.</li>
+
+</ul>
+
+</section>
+
+<section id="certificate">
+
+<h2 class="title">نموذج شهادة التخرج</h2>
+
+<div class="certificate">
+
+<h2>شهادة بكالوريوس</h2>
+
+<h3>في فنون المافيا والاستراتيجيات</h3>
+
+<br><br>
+
+<p>تُمنح هذه الشهادة إلى</p>
+
+<h1>اسم الطالب</h1>
+
+<br>
+
+<p>
+بعد اجتياز جميع البرامج الأكاديمية المعتمدة
+ومتطلبات التخرج بنجاح.
+</p>
+
+<br><br>
+
+<p>المؤسس والمدير العام</p>
+
+<h3>حسام عيسى الدراوشة</h3>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Mafia University
+
+<br>
+
+جامعة المافيا العالمية
+
+</footer>
+
+</body>
+</html>top:0;
 width:100%;
 background:rgba(0,0,0,.9);
 backdrop-filter:blur(10px);
